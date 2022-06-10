@@ -15,23 +15,20 @@ class UserSeeder extends Seeder
      */
     public function run()
     {   
-        DB::table('products')->insert([
+        DB::table('users')->insert([
             [
-                'name'=>"موبایل سامسونگ",
-                'category_id'=>2,
-                'price'=>1000,
-                'available_number'=>50,
-                'sold_number'=>27,
-                'seen_number'=>512
+                'first_name'=>"Ali",
+                'last_name'=> "Mohammadi",
+                'email'=>"dFG@GMail.com",
+                'city'=>"Isfahan"
             ],
             [
-                'name'=>"موبایل ال جی ",
-                'category_id'=>2,
-                'price'=>2000,
-                'available_number'=>60,
-                'sold_number'=>37,
-                'seen_number'=>112
+                'first_name'=>"Reza",
+                'last_name'=> "Ahmadi",
+                'email'=>"dFGdsfdDFsf@GMail.com",
+                'city'=>"Hamedan"
             ],
+
            
 ]);
 }

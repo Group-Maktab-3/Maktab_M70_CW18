@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\FormController;
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
@@ -28,9 +30,16 @@ use Illuminate\Support\Facades\Route;
 //     //  return  Product::likeSomething('سامسونگ')->get();
   
 // });
-Route::get('/', function () {
+// Route::get('/', function () {
     
-    return  Category::find(2)->products;
-});
+//     // return  Category::find(2)->products;
+//     // return  Category::find(2)->products()->order();
+//     // return  Category::find(2)->order; 
+//     return Order::find(6)->product->category->categoryFather  ; 
+   
+
+// });
+Route::get('/', [FormController::class,'form']);
+Route::post('/', [FormController::class,'store']);
 
 
